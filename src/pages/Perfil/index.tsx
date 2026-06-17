@@ -2,7 +2,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Poster from '../../components/Poster';
-import style from './style';
+import styles from './style';
 
 interface MovieItem {
   id: string;
@@ -26,63 +26,47 @@ export default function Perfil() {
   ];
 
   return (
-    <SafeAreaView style={style.container} edges={['top']}>
-
-      <View style={style.headerRow}>
+    <SafeAreaView style={styles.container} edges={['top']}>
+      <View style={styles.headerRow}>
         <TouchableOpacity><Ionicons name="settings-outline" size={22} color="#99aabb" /></TouchableOpacity>
-        <Text style={style.headerUsername}>Felipe Menegheli</Text>
+        <Text style={styles.headerUsername}>Felipe Menegheli</Text>
         <TouchableOpacity><Ionicons name="ellipsis-horizontal" size={22} color="#99aabb" /></TouchableOpacity>
       </View>
 
-      {/* Sub-abas de Navegação Interna */}
-      <View style={style.profileTabs}>
-        <TouchableOpacity style={[style.tabButton, style.activeTabButton]}>
-          <Text style={style.activeTabStyleText}>Profile</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={style.tabButton}>
-          <Text style={style.tabStyleText}>Diary</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={style.tabButton}>
-          <Text style={style.tabStyleText}>Lists</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={style.tabButton}>
-          <Text style={style.tabStyleText}>Watchlist</Text>
-        </TouchableOpacity>
+      <View style={styles.profileTabs}>
+        <TouchableOpacity style={[styles.tabButton, styles.activeTabButton]}><Text style={styles.activeTabStyleText}>Profile</Text></TouchableOpacity>
+        <TouchableOpacity style={styles.tabButton}><Text style={styles.tabStyleText}>Diary</Text></TouchableOpacity>
+        <TouchableOpacity style={styles.tabButton}><Text style={styles.tabStyleText}>Lists</Text></TouchableOpacity>
+        <TouchableOpacity style={styles.tabButton}><Text style={styles.tabStyleText}>Watchlist</Text></TouchableOpacity>
       </View>
 
       <ScrollView showsVerticalScrollIndicator={false}>
-        {/* Avatar Redondo Centralizado */}
-        <View style={style.avatarContainer}>
-          <Image 
-            source={{ uri: 'https://media-gig4-1.cdn.whatsapp.net/v/t61.24694-24/534425006_1587607675991849_914122749513288492_n.jpg?ccb=11-4&oh=01_Q5Aa4wFQIoMRuMhjVMiHs6Q4NZ4RoUWzUDOnykVU3SPP7Ng9UQ&oe=6A3ED6A4&_nc_sid=5e03e0&_nc_cat=107' }} 
-            style={style.avatarImage} 
-          />
+        <View style={styles.avatarContainer}>
+          <Image source={{ uri: 'https://media-gig4-1.cdn.whatsapp.net/v/t61.24694-24/534425006_1587607675991849_914122749513288492_n.jpg?ccb=11-4&oh=01_Q5Aa4wFQIoMRuMhjVMiHs6Q4NZ4RoUWzUDOnykVU3SPP7Ng9UQ&oe=6A3ED6A4&_nc_sid=5e03e0&_nc_cat=107' }} style={styles.avatarImage} />
         </View>
 
-        <View style={style.sectionDivider} />
-        <Text style={style.sectionTitle}>FAVORITES</Text>
-        <View style={style.gridContainer}>
-          {favorites.map((movie) => (
-            <Poster key={movie.id} uri={movie.image} style={style.profilePosterSize} />
-          ))}
+        <View style={styles.sectionDivider} />
+        <Text style={styles.sectionTitle}>FAVORITES</Text>
+        <View style={styles.gridContainer}>
+          {favorites.map((movie) => <Poster key={movie.id} uri={movie.image} style={styles.profilePosterSize} />)}
         </View>
 
-        <View style={style.sectionDivider} />
-        <Text style={style.sectionTitle}>RECENT ACTIVITY</Text>
-        <View style={style.gridContainer}>
+        <View style={styles.sectionDivider} />
+        <Text style={styles.sectionTitle}>RECENT ACTIVITY</Text>
+        <View style={styles.gridContainer}>
           {recentActivity.map((movie) => (
-            <View key={movie.id} style={style.activityItemContainer}>
-              <Poster uri={movie.image} style={style.profilePosterSize} />
-              <View style={style.ratingRow}>
-                <Text style={style.ratingStars}>{movie.rating}</Text>
+            <View key={movie.id} style={styles.activityItemContainer}>
+              <Poster uri={movie.image} style={styles.profilePosterSize} />
+              <View style={styles.ratingRow}>
+                <Text style={styles.ratingStars}>{movie.rating}</Text>
                 <Ionicons name="list-outline" size={11} color="#667888" style={{ marginLeft: 3 }} />
               </View>
             </View>
           ))}
         </View>
 
-        <TouchableOpacity style={style.moreActivityRow}>
-          <Text style={style.moreActivityText}>More activity</Text>
+        <TouchableOpacity style={styles.moreActivityRow}>
+          <Text style={styles.moreActivityText}>More activity</Text>
           <Ionicons name="chevron-forward" size={16} color="#667888" />
         </TouchableOpacity>
       </ScrollView>

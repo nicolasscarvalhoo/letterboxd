@@ -29,26 +29,34 @@ export default function App() {
       >
 
         <Tab.Screen 
-          name="FilmsTab" 
+          name="Letterboxd" 
           component={Feed} 
           options={{
-            tabBarIcon: ({ color, size }) => <Ionicons name="layers" size={size || 24} color={color} />,
+            tabBarIcon: ({ color, size }) => 
+            <Ionicons 
+            name="layers" 
+            size={size || 24} 
+            color={color} />,
           }}
         />
 
         <Tab.Screen 
-          name="SearchTab" 
+          name="Letterboxd - Search" 
           component={DummyComponent} 
           listeners={{
             tabPress: (e) => e.preventDefault(), 
           }}
           options={{
-            tabBarIcon: ({ color, size }) => <Ionicons name="search" size={size || 24} color={color} />,
+            tabBarIcon: ({ color, size }) => 
+            <Ionicons 
+            name="search" 
+            size={size || 24} 
+            color={color} />,
           }}
         />
 
         <Tab.Screen 
-          name="AddTab" 
+          name="Letterboxd - Add" 
           component={DummyComponent} 
           listeners={{
             tabPress: (e) => e.preventDefault(), 
@@ -63,29 +71,40 @@ export default function App() {
                 justifyContent: 'center', 
                 alignItems: 'center'
               }}>
-                <Ionicons name="add" size={26} color="#fff" />
+                <Ionicons 
+                name="add" 
+                size={26} 
+                color="#fff" />
               </View>
             ),
           }}
         />
 
         <Tab.Screen 
-          name="ActivityTab" 
+          name="Letterboxd - Flash" 
           component={DummyComponent} 
           listeners={{
             tabPress: (e) => e.preventDefault(), 
           }}
           options={{
-            tabBarIcon: ({ color, size }) => <Ionicons name="flash" size={size || 24} color={color} />,
+            tabBarIcon: ({ color, size }) => 
+            <Ionicons 
+            name="flash" 
+            size={size || 24} 
+            color={color} />,
           }}
         />
 
       
         <Tab.Screen 
-          name="ProfileTab" 
+          name="Letterboxd - Profile" 
           component={Perfil} 
           options={{
-            tabBarIcon: ({ color, size }) => <Ionicons name="person" size={size || 24} color={color} />,
+            tabBarIcon: ({ color, size }) => 
+            <Ionicons 
+            name="person" 
+            size={size || 24} 
+            color={color} />,
           }}
         />
       </Tab.Navigator>

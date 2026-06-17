@@ -6,24 +6,28 @@ const posterWidth = (width - 30 - 18) / 4;
 const posterHeight = posterWidth * 1.48;
 
 const style = StyleSheet.create({
-  container: {
+  container: 
+  {
     flex: 1,
     backgroundColor: '#14181c',
   },
-  headerRow: {
+  headerRow: 
+  {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingHorizontal: 15,
     paddingVertical: 12,
   },
-  headerUsername: {
+  headerUsername: 
+  {
     color: '#ffffff',
     fontSize: 17,
     fontWeight: 'bold',
     letterSpacing: 0.3,
   },
-  profileTabs: {
+  profileTabs: 
+  {
     flexDirection: 'row',
     backgroundColor: '#1c242c',
     marginHorizontal: 10,
@@ -31,46 +35,55 @@ const style = StyleSheet.create({
     padding: 3,
     marginBottom: 15,
   },
-  tabButton: {
+  tabButton: 
+  {
     flex: 1,
     alignItems: 'center',
     paddingVertical: 8,
     borderRadius: 6,
   },
-  activeTabButton: {
+  activeTabButton: 
+  {
     backgroundColor: '#445566',
   },
-  tabStyleText: {
+  tabStyleText: 
+  {
     color: '#99aabb',
     fontWeight: '600',
     fontSize: 13,
   },
-  activeTabStyleText: {
+  activeTabStyleText: 
+  {
     color: '#ffffff',
     fontWeight: 'bold',
     fontSize: 13,
   },
-  avatarContainer: {
+  avatarContainer: 
+  {
     alignItems: 'center',
     marginVertical: 15,
   },
-  avatarImage: {
+  avatarImage: 
+  {
     width: 96,
     height: 96,
     borderRadius: 48,
     backgroundColor: '#1c242c',
   },
-  locationText: {
+  locationText: 
+  {
     color: '#667888',
     fontSize: 13,
     marginTop: 10,
   },
-  sectionDivider: {
+  sectionDivider: 
+  {
     height: 1,
     backgroundColor: '#242c34',
     marginTop: 15,
   },
-  sectionTitle: {
+  sectionTitle: 
+  {
     color: '#99aabb',
     fontSize: 11,
     fontWeight: '700',
@@ -79,30 +92,36 @@ const style = StyleSheet.create({
     marginTop: 15,
     marginBottom: 12,
   },
-  gridContainer: {
+  gridContainer: 
+  {
     flexDirection: 'row',
     paddingHorizontal: 15,
     justifyContent: 'space-between',
   },
-  profilePosterSize: {
+  profilePosterSize: 
+  {
     width: posterWidth,
     height: posterHeight,
     borderRadius: 4,
   },
-  activityItemContainer: {
+  activityItemContainer: 
+  {
     alignItems: 'flex-start',
     width: posterWidth,
   },
-  ratingRow: {
+  ratingRow: 
+  {
     flexDirection: 'row',
     alignItems: 'center',
     marginTop: 6,
   },
-  ratingStars: {
+  ratingStars: 
+  {
     color: '#00e054',
     fontSize: 11,
   },
-  moreActivityRow: {
+  moreActivityRow: 
+  {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -112,7 +131,8 @@ const style = StyleSheet.create({
     borderBottomColor: '#242c34',
     marginTop: 20,
   },
-  moreActivityText: {
+  moreActivityText: 
+  {
     color: '#99aabb',
     fontSize: 15,
   },

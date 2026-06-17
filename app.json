@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "spotify",
+    "scheme": "letterboxd",
     "userInterfaceStyle": "automatic",
     "ios": {
       "supportsTablet": true
@@ -17,9 +17,10 @@
       }
     },
     "web": {
+      "name": "Letterboxd",
       "bundler": "metro",
       "output": "single",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "https://a.ltrbxd.com/logos/letterboxd-mac-icon.png"
     }
   }
 }

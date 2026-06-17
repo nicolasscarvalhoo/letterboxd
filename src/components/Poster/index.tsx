@@ -7,10 +7,13 @@ interface PosterProps {
   style?: StyleProp<ImageStyle>; 
 }
 
-const Poster: React.FC<PosterProps> = ({ uri, style }) => {
+const Poster: React.FC<PosterProps> = ({ uri, style: externalStyle }) => {
   return (
-    <TouchableOpacity activeOpacity={0.8}>
-      <Image source={{ uri }} style={[styles.poster, style]} />
+    <TouchableOpacity 
+    activeOpacity={0.8}>
+      <Image 
+      source={{ uri }} 
+      style={[styles.poster, externalStyle]} />
     </TouchableOpacity>
   );
 };
